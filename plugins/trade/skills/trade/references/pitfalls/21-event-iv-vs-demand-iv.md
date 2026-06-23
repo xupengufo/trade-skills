@@ -32,8 +32,10 @@ Concrete failure (NOK 2026-05-11): NOK at IV Rank 66, IV 74%. I recommended "rol
    - >45 days to earnings AND IVR elevated = **demand-driven default** — investigate flow before assuming crush
 
 2. **Always pull net premium data before making a vega recommendation**:
-   ```
-   Funda API: /v1/options/stock?ticker=X&type=net-prem-ticks
+   ```bash
+   python ${FUTUAPI_DIR}/scripts/quote/get_option_volatility.py US.X
+   # and derivatives anomaly for PCR/sentiment
+   python ${DERIVATIVES_ANOMALY_DIR}/scripts/handle_derivatives_anomaly.py US.X --json
    ```
    - Net call premium >+$5M/day on 3+ consecutive days = sustained institutional accumulation
    - Net premium turning negative or sharply bid-side = event-style top forming

@@ -130,6 +130,9 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+# npm lockfile — this project uses pnpm; ignore package-lock.json to prevent dual-lockfile drift.
+package-lock.json
+
 # Personal knowledge directory scaffolded by `/trade setup`.
 # Holds user-private substack posts, X / twitter threads, and writedowns —
 # never commit back to the plugin repo.

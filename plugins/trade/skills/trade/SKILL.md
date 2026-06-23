@@ -5,17 +5,16 @@ description: >
   `/trade setup` scaffolds a knowledge directory (substack, X,
   writedowns); `/trade import [file]` parses one raw file (PDF,
   screenshot, text) into structured YAML; `/trade report [tickers]`
-  reads today's capital flow / 资金流向 (retail / 大单 / institutional
-  proxy from options premium-flow); `/trade analysis` (or any
-  unrecognized first word) runs the default analysis flow, auto-loading
-  the knowledge directory. Use for trade analysis, earnings plays,
-  money-flow / 流入流出 checks, or ticker mentions (e.g., "analyze APP").
-  Triggers on multi-leg options (Jade Lizard, bull put spread, iron
-  condor, diagonal, calendar), IV / IV crush, LEAPS / stock
-  replacement, dealer GEX / gamma / options flow, or VIX / vol hedging. 27 pitfalls, a gamma framework, case studies. TradingView
-  + Funda for data; replies in Chinese. Check 3 axes: vega vs IVR (p19),
-  delta vs thesis, asymmetry; bull-conviction >= 4 forbids Jade Lizard /
-  IC / Calendar (p24).
+  reads today's capital flow / 资金流向 (retail/large/inst split from
+  Futu OpenD flow/distribution/short-selling); `/trade analysis` (or
+  any unrecognized first word) runs default analysis flow, auto-loading
+  knowledge. Use for trade analysis, earnings plays, money-flow/流入流出
+  checks, or ticker mentions. Triggers on multi-leg options (Jade Lizard,
+  bull put spread, iron condor, diagonal, calendar), IV / IV crush,
+  LEAPS / stock replacement, dealer GEX / gamma, or VIX / vol hedging.
+  27 pitfalls, gamma framework, case studies. TradingView + Futu OpenD
+  for data; replies in Chinese. Check 3 axes: vega vs IVR (p19), delta
+  vs thesis, asymmetry; conviction >= 4 forbids Jade Lizard/IC (p24).
 metadata:
   okf_version: "0.1"
   okf_conformance: references/OKF.md
@@ -41,9 +40,9 @@ Active US-equity options trader's personal knowledge base. Concrete strikes, pro
 
 ## Data Access
 
-**Use TradingView desktop reader (`finance-data-providers:tradingview-reader`) FIRST** for quotes, options chains, IV, screener, watchlists, gainers / losers. Fall back to **Funda AI API (`finance-data-providers:funda-data`)** for anything TradingView can't provide: fundamentals, filings, transcripts, analyst estimates, options flow / GEX, supply chain, sentiment, Polymarket, congressional trades, economics. Do not substitute yfinance, web search, or guesses.
+**Use TradingView desktop reader (`finance-data-providers:tradingview-reader`) FIRST** for quotes, options chains, IV, screener, watchlists, gainers / losers. Fall back to **Futu OpenD API (`futuapi` skill)** for data TradingView cannot provide: options chains/Greeks, historical K-lines, capital flow/distribution, daily short selling, valuation percentiles, analyst ratings, and community sentiment (via `futu-comment-sentiment`).
 
-**Credentials live in the root repo `.env`, not the worktree.** When running inside a worktree (path matches `.claude/worktrees/*`), the worktree itself has no `.env` — resolve to the main repo's `.env` by stripping the `.claude/worktrees/<name>` suffix from the current working directory.
+**Prerequisite:** FutuOpenD gateway must be running locally (default `127.0.0.1:11111`). If it is not running, show a friendly warning and suggest running `/install-futu-opend` or starting the gateway. Do not substitute yfinance, web search, or guesses.
 
 ## Response Rules
 
@@ -86,7 +85,7 @@ Active US-equity options trader's personal knowledge base. Concrete strikes, pro
 |---|---|---|
 | `setup` | Scaffold a personal knowledge directory (`./knowledge/` by default) for substack posts, X / twitter threads, and writedowns | [references/commands/setup.md](references/commands/setup.md) |
 | `import <file_path>` | Parse one raw artifact (PDF, image, text) into structured YAML inside the knowledge directory | [references/commands/import.md](references/commands/import.md) |
-| `report [tickers | basket]` | Today's capital-flow / 资金流向 read (散户 / 大单 / 机构 proxied from Funda options premium-flow) across one or more names, as a comparison table + cross-section synthesis | [references/commands/report.md](references/commands/report.md) |
+| `report [tickers | basket]` | Today's capital-flow / 资金流向 read (散户 / 大单 / 机构 from Futu OpenD flow/distribution/short-selling) across one or more names, as a comparison table + cross-section synthesis | [references/commands/report.md](references/commands/report.md) |
 | `analysis [ticker | situation]` | Default trade analysis flow — preflight (knowledge dir, vega sanity, market data), then situation-specific loads | [references/commands/analysis.md](references/commands/analysis.md) |
 
 ### Routing rules
