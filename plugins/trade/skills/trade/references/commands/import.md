@@ -13,7 +13,7 @@ Ingest one external trading-knowledge item into the **user's personal knowledge 
 - **A clean platform post** (a substack post, or an X / twitter post / thread), as a raw artifact *or* a link → parse per the matching template into **structured YAML** in `substack/` or `twitter/`.
 - **Other external research** (a macro / brokerage report, a blog or WeChat article, a pasted thesis — anything you must *read and synthesize* rather than mechanically extract) → write a **writedown** markdown digest in `writedowns/`.
 
-> **Destination — read first.** Output **always** lands in the user's personal knowledge dir (resolved the way `analysis` does: `$TRADE_KNOWLEDGE_DIR` → a `knowledge_path:` line in `CLAUDE.md` → `./knowledge/`). A third-party article digest is the *user's* collected research — it does **NOT** go in this repo's curated `references/` library, **even if the user says "our knowledge base."** `references/` is first-party content that ships to every installer; see the destination rule in `SKILL.md` → "Adding to the Knowledge Base." If you genuinely can't tell which is meant, ask before writing.
+> **Destination — read first.** Output **always** lands in the user's personal knowledge dir (resolved the way `analysis` does: `$TRADE_KNOWLEDGE_DIR` → a `knowledge_path:` line in `AGENTS.md` or `CLAUDE.md` → `./knowledge/`). A third-party article digest is the *user's* collected research — it does **NOT** go in this repo's curated `references/` library, **even if the user says "our knowledge base."** `references/` is first-party content that ships to every installer; see the destination rule in `SKILL.md` → "Adding to the Knowledge Base." If you genuinely can't tell which is meant, ask before writing.
 
 ## Workflow
 

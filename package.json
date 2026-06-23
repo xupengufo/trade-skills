@@ -2,7 +2,7 @@
   "private": true,
   "name": "trade-skills",
   "version": "1.0.0",
-  "description": "Personal options trading Claude Code plugin marketplace.",
+  "description": "Personal options trading AI agent skill/plugin marketplace (compatible with Claude Code, Gemini Antigravity, OpenClaw, and other coding assistants).",
   "scripts": {
     "bump": "ccbump"
   },

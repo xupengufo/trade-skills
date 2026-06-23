@@ -117,14 +117,14 @@ After scaffolding, explain the two ingestion paths:
 
 ### 6. If the knowledge dir is outside the current repo, record its path
 
-`analysis` discovers the knowledge dir by, in order: `$TRADE_KNOWLEDGE_DIR` → a `knowledge_path:` line in the nearest `CLAUDE.md` → `./knowledge/`. The default `./knowledge/` only works when you run from the repo that holds it.
+`analysis` discovers the knowledge dir by, in order: `$TRADE_KNOWLEDGE_DIR` → a `knowledge_path:` line in the nearest `AGENTS.md` or `CLAUDE.md` → `./knowledge/`. The default `./knowledge/` only works when you run from the repo that holds it.
 
 So **if the user chose a path outside the current working directory** (e.g. a separate private notes repo like `~/code/notes/knowledge`), tell them to make it discoverable from anywhere by **either**:
 
-- adding `knowledge_path: <absolute-or-~-path>` to their `~/.claude/CLAUDE.md` (global) or a project `CLAUDE.md`, **or**
+- adding `knowledge_path: <absolute-or-~-path>` to their `AGENTS.md` or `CLAUDE.md` (project root, global config, or `~/.claude/CLAUDE.md`), **or**
 - exporting `TRADE_KNOWLEDGE_DIR=<path>` in their shell profile.
 
-Offer to write the `~/.claude/CLAUDE.md` line for them (append-only, deduped). If the chosen path is the default `./knowledge/` inside the current repo, skip this step.
+Offer to write the `AGENTS.md` or `CLAUDE.md` line for them (append-only, deduped). If the chosen path is the default `./knowledge/` inside the current repo, skip this step.
 
 ## Constraints
 

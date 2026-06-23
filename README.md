@@ -3,32 +3,37 @@
 > [!WARNING]
 > This project is for educational and informational purposes only. Nothing here constitutes financial advice. Always do your own research and consult a qualified financial advisor before making investment decisions.
 
-A personal Claude Code plugin marketplace housing one options-trading skill — backed by a curated [Open Knowledge Format (OKF)](plugins/trade/skills/trade/references/OKF.md) library of 25 pitfalls and case studies (INTC, Mag-7, APP, NOK, TSEM, CBRS, SNOW, MDB, VIX). Layout follows the [`himself65/finance-skills`](https://github.com/himself65/finance-skills) convention.
+A personal AI agent skill/plugin marketplace housing one options-trading skill (compatible with Claude Code, Gemini Antigravity, OpenClaw, and other agentic coding assistants) — backed by a curated [Open Knowledge Format (OKF)](plugins/trade/skills/trade/references/OKF.md) library of 27 pitfalls and case studies (INTC, Mag-7, APP, NOK, TSEM, CBRS, SNOW, MDB, VIX, SATS, 6981). Layout follows the [`himself65/finance-skills`](https://github.com/himself65/finance-skills) convention.
 
 ## Quick Start
 
-### Claude Code — Install the plugin
+### Claude Code — Install the plugin / skill
 
 ```bash
 npx plugins add himself65/trade-skills
-```
-
-### Claude Code — Install just the skill
-
-```bash
+# or just the skill
 npx skills add himself65/trade-skills
 ```
 
-### Other agents
+### Gemini Antigravity — Install the skill
+
+Clone the repository and symlink or copy the skill directory into one of Gemini's customization roots:
+```bash
+# Clone the repository
+git clone https://github.com/xupengufo/trade-skills.git ~/trade-skills
+# Link as project-scoped skill (create .agents/skills/ directory if it doesn't exist)
+mkdir -p .agents/skills
+ln -s ~/trade-skills/plugins/trade/skills/trade .agents/skills/trade
+# Or link as a global skill
+ln -s ~/trade-skills/plugins/trade/skills/trade ~/.gemini/config/skills/trade
+```
+
+### Other agents (OpenClaw, etc.)
 
 ```bash
 npx skills add himself65/trade-skills -a <agent-name>
-```
-
-### Local development install (from a clone)
-
-```bash
-git clone https://github.com/himself65/trade-skills.git ~/trade-skills
+# For manual local development install (from a clone)
+git clone https://github.com/xupengufo/trade-skills.git ~/trade-skills
 ln -s ~/trade-skills/plugins/trade/skills/trade ~/.claude/skills/trade
 ```
 
@@ -40,7 +45,7 @@ Multi-leg options trading assistant with concrete strikes, IV-aware structures, 
 
 | Skill | Description |
 |---|---|
-| [trade](plugins/trade/skills/trade/) | Options trading knowledge base — 25 pitfalls + case studies (INTC, Mag-7, APP, NOK, TSEM, CBRS, SNOW, MDB, VIX) + structure-to-regime framework. Lazy-loaded, OKF-conformant. |
+| [trade](plugins/trade/skills/trade/) | Options trading knowledge base — 27 pitfalls + 11 case studies (INTC, Mag-7, APP, NOK, TSEM, CBRS, SNOW, MDB, VIX, SATS, 6981) + structure-to-regime framework. Lazy-loaded, OKF-conformant. |
 
 ## Open Knowledge Format
 
