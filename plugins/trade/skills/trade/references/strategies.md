@@ -134,7 +134,7 @@ Replacing 100 shares with deep ITM LEAPS + cash. **Capital efficiency play, not 
 
 ## VIX / Volatility-Hedge Structure Selection
 
-For "short the market" or portfolio-hedge expressions via VIX. **Read `../pitfalls/25-vix-options-futures-mechanics.md` first** — VIX options settle against the VIX *future* of their expiry, not spot VIX. Case study: `../ticker/vix-2026-06.md`.
+For "short the market" or portfolio-hedge expressions via VIX. **Read `pitfalls/25-vix-options-futures-mechanics.md` first** — VIX options settle against the VIX *future* of their expiry, not spot VIX. Case study: `ticker/vix-2026-06.md`.
 
 ### First decide the job — these are NOT interchangeable
 

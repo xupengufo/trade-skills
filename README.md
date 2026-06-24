@@ -20,7 +20,7 @@ npx skills add himself65/trade-skills
 Clone the repository and symlink or copy the skill directory into one of Gemini's customization roots:
 ```bash
 # Clone the repository
-git clone https://github.com/xupengufo/trade-skills.git ~/trade-skills
+git clone https://github.com/himself65/trade-skills.git ~/trade-skills
 # Link as project-scoped skill (create .agents/skills/ directory if it doesn't exist)
 mkdir -p .agents/skills
 ln -s ~/trade-skills/plugins/trade/skills/trade .agents/skills/trade
@@ -33,7 +33,7 @@ ln -s ~/trade-skills/plugins/trade/skills/trade ~/.gemini/config/skills/trade
 ```bash
 npx skills add himself65/trade-skills -a <agent-name>
 # For manual local development install (from a clone)
-git clone https://github.com/xupengufo/trade-skills.git ~/trade-skills
+git clone https://github.com/himself65/trade-skills.git ~/trade-skills
 ln -s ~/trade-skills/plugins/trade/skills/trade ~/.claude/skills/trade
 ```
 

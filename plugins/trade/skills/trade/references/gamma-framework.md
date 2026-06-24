@@ -150,11 +150,14 @@ Treat public GEX as reasonable approximation, not precision tool. Confluence wit
 - **Catalyst-window gamma plays** — IV crush + fundamental shift dominate; gamma noise overwhelms
 - **Decoupling structure from regime**: trading short-gamma squeeze structures in a long-gamma environment
 
----
-
 ## Cross-References
 
-- **Pitfall 17** — dealer flow drives prices, not retail psychology
-- **Pitfall 03** — tape > opinion (tape-leads-direction principle)
-- **Pitfall 11** — LEAPS vega tax (gamma framework ignores vega risk in long-dated structures)
-- **strategies.md** — structure-to-regime matching for execution
+- Pitfall: [`pitfalls/17-dealer-flow-not-retail.md`](pitfalls/17-dealer-flow-not-retail.md) — dealer flow drives prices, not retail psychology.
+- Pitfall: [`pitfalls/03-tape-over-dcf.md`](pitfalls/03-tape-over-dcf.md) — tape > opinion (tape-leads-direction principle).
+- Pitfall: [`pitfalls/11-leaps-vega-tax.md`](pitfalls/11-leaps-vega-tax.md) — LEAPS vega tax (gamma framework ignores vega risk in long-dated structures).
+- Pitfall: [`pitfalls/19-direction-vega-independent-axes.md`](pitfalls/19-direction-vega-independent-axes.md) — vega-axis sanity check.
+- Pitfall: [`pitfalls/21-event-iv-vs-demand-iv.md`](pitfalls/21-event-iv-vs-demand-iv.md) — post-earnings options reset.
+- Pitfall: [`pitfalls/24-capped-upside-vs-bull-conviction.md`](pitfalls/24-capped-upside-vs-bull-conviction.md) — structure recommendations based on conviction.
+- Pitfall: [`pitfalls/25-vix-options-futures-mechanics.md`](pitfalls/25-vix-options-futures-mechanics.md) — volatility hedging structures.
+- Framework: [`strategies.md`](strategies.md) — structure-to-regime matching for execution.
+- Framework: [`price-action-framework.md`](price-action-framework.md) — sibling framework for orderbook microstructure.

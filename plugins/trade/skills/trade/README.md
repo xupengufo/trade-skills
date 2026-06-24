@@ -1,6 +1,6 @@
 # Trade
 
-Multi-leg options trading assistant — concrete strikes, IV-aware structures, probability-weighted scenarios. Single skill with three subcommands, modeled on the [`pbakaus/impeccable`](https://github.com/pbakaus/impeccable) pattern.
+Multi-leg options trading assistant — concrete strikes, IV-aware structures, probability-weighted scenarios. Single skill with four subcommands, modeled on the [`pbakaus/impeccable`](https://github.com/pbakaus/impeccable) pattern.
 
 ## Commands
 

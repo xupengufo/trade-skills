@@ -13,21 +13,21 @@ timestamp: YYYY-MM-DDTHH:MM:SSZ
 
 # {YYYY-MM-DD} — {Topic}
 
-## TL;DR
+## TL;DR / 核心结论
 
 One paragraph. State the conclusion first. If this is a trade thesis, name the
 ticker, direction, structure, and rough sizing in this paragraph.
 
 ---
 
-## Context
+## Context / 背景与现状
 
 - **What prompted this writedown?** (catalyst, news, channel check, vibe shift, etc.)
 - **Where are we in the cycle?** (event clock — earnings T-N days, post-event, mid-quarter)
 - **Stock state**: price, recent move, IV rank
 - **Sentiment state**: sell-side, social, channel checks
 
-## Thesis
+## Thesis / 投资逻辑与论证
 
 Step-by-step argument. Be falsifiable — what would make you wrong?
 
@@ -35,33 +35,33 @@ Step-by-step argument. Be falsifiable — what would make you wrong?
 2. ...
 3. ...
 
-## Structure (if trading)
+## Structure / 交易结构与计划（如适用）
 
 - **Setup**: strikes, expiry, debit/credit, max profit/loss
 - **Vega sign**: long vega / short vega / neutral (sanity-check against IVR)
 - **Catalyst alignment**: does the expiry cover the catalyst?
 - **Exit plan**: when to take, when to flip, when to cut
 
-## What could invalidate this
+## Invalidation / 催化失效与反转条件
 
 - ...
 - ...
 
-## Open questions
+## Open Questions / 待澄清问题
 
 - ...
 
 ---
 
-## Related
+## Related / 关联引用
 
 - Pitfall: `references/pitfalls/NN-*.md`
 - Case study: `references/ticker/<name>.md`
-- Other knowledge: `../substack/<file>.md`, `../twitter/<file>.md`
+- Other knowledge: `../substack/<file>.yaml`, `../twitter/<file>.yaml`
 
 ---
 
-## Updates
+## Updates / 动态更新
 
 ### YYYY-MM-DD
 

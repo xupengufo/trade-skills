@@ -3,7 +3,7 @@ type: Changelog
 title: Trade Knowledge Base — Change Log
 description: Chronological history of the curated trade knowledge bundle — pitfalls, case studies, and frameworks added over time.
 tags: [log, changelog, history]
-timestamp: 2026-06-13T00:00:00Z
+timestamp: 2026-06-22T12:00:00Z
 ---
 
 # Change Log

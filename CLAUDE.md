@@ -8,7 +8,8 @@ Personal options trading Claude Code plugin marketplace. Contains one plugin (`t
 
 - `/trade setup` — asks the user where to scaffold a personal knowledge directory (default `./knowledge/`) and creates the substack / twitter / writedowns layout with templates
 - `/trade import <file_path>` — parses one raw artifact (PDF, screenshot, text) into structured YAML inside the knowledge directory
-- `/trade analysis [ticker | situation]` — default trade analysis flow. Triggered explicitly, or whenever the first argument doesn't match `setup` / `import` (so natural-language invocations like "analyze NVDA" route here)
+- `/trade report [tickers | basket]` — reads today's capital flow / 资金流向 (retail/large/inst split from Futu OpenD flow/distribution/short-selling)
+- `/trade analysis [ticker | situation]` — default trade analysis flow. Triggered explicitly, or whenever the first argument doesn't match `setup` / `import` / `report` (so natural-language invocations like "analyze NVDA" route here)
 
 ## Repository structure
 
@@ -34,6 +35,7 @@ plugins/
           commands/             # Subcommand reference files (impeccable pattern)
             setup.md            # /trade setup workflow
             import.md           # /trade import workflow
+            report.md           # /trade report workflow
             analysis.md         # default analysis preflight + situation→reference map
             templates/          # Files copied into the user's knowledge dir by /trade setup
               knowledge-index.md
@@ -56,8 +58,8 @@ The `references/` tree is an **Open Knowledge Format (OKF) v0.1** bundle: every 
 ### Routing rules (from SKILL.md)
 
 1. No argument → render the Commands table as a menu.
-2. First word matches `setup`, `import`, or `analysis` → load the matching `references/commands/<name>.md` and follow it.
-3. First word doesn't match → default to `analysis`; load `references/commands/analysis.md` and treat the full input as the analysis target.
+2. First word matches `setup`, `import`, `report`, or `analysis` → load the matching `references/commands/<name>.md` and follow it.
+3. First word doesn't match → default to `analysis` (unless capital-flow request matches the `report` exception); load `references/commands/analysis.md` and treat the full input as the analysis target.
 
 ### SKILL.md frontmatter
 

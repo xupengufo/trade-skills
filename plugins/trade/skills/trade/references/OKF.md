@@ -59,7 +59,7 @@ The user-private substack/X artifacts stay as `.yaml` structured-data concepts (
 
 ## Bundle conventions
 
-- **Identity = path.** A file's path is its concept URI. Links between concepts are relative markdown links (e.g. `../ticker/snow-2026-05.md`), forming the knowledge graph.
+- **Identity = path.** A file's path is its concept URI. Links between concepts are relative markdown links (e.g. `../ticker/snow-2026-05.md` when linking from a pitfall file to a ticker file, or `ticker/snow-2026-05.md` when linking from the references root), forming the knowledge graph.
 - **`index.md` is the canonical navigable index** (OKF reserved name). To preserve GitHub's directory-level rendering without duplicating content, each directory also keeps a one-line `README.md` stub that points to its `index.md`.
 - **`log.md`** (OKF reserved name) records the knowledge base's chronological evolution — see [`log.md`](log.md).
 - **Bundle entry point** is [`index.md`](index.md) at the `references/` root, which links out to every sub-area.

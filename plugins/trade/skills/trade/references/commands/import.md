@@ -22,7 +22,7 @@ Ingest one external trading-knowledge item into the **user's personal knowledge 
 The argument is a single item — a **file path** or a **URL / shared link**. Accept:
 
 - Absolute paths; paths relative to cwd; paths relative to the knowledge dir (e.g., `substack/raw/foo.pdf`)
-- A **URL** (substack / X / WeChat / blog / research link) — read it with the web reader (`finance-social-readers:opencli-reader`'s `web read`, or `WebFetch`). If the page is paywalled or unreadable, ask the user for a PDF / screenshot / paste instead.
+- A **URL** (substack / X / WeChat / blog / research link) — read it with the URL reading tool (`read_url_content`). If the page is paywalled or unreadable, ask the user for a PDF / screenshot / paste instead.
 
 For a file, verify it exists and is a supported type:
 
@@ -36,12 +36,15 @@ If a file doesn't exist or the type isn't supported, stop and report — do not 
 
 ### 2. Locate the knowledge directory
 
-Find the user's knowledge tree by checking, in order:
+Find the user's knowledge tree by checking, in order (matching `/trade analysis` resolution):
 
 1. If the source path is inside a recognizable `*/{substack,twitter}/raw/` subtree, walk up to that knowledge root.
-2. Otherwise, check `./knowledge/` in the cwd.
-3. Otherwise, walk up from cwd looking for a directory containing `index.md` (or a legacy `README.md`) with `# Personal Trade Knowledge` as the heading.
-4. If none found, stop and tell the user to run `/trade setup` first (or pass `--knowledge-dir=<path>` — accept this as an optional inline flag if the user provides it).
+2. `$TRADE_KNOWLEDGE_DIR` (environment variable), if set.
+3. A `knowledge_path:` line in the nearest `AGENTS.md` or `CLAUDE.md` (project root, project `AGENTS.md`, `~/.claude/CLAUDE.md`, or `~/.gemini/config/AGENTS.md`) — an absolute or `~`-path.
+4. `./knowledge/` relative to the current working directory.
+5. Walk up from cwd looking for a directory containing `index.md` (or a legacy `README.md`) with `# Personal Trade Knowledge` as the heading.
+
+If none found, stop and tell the user to run `/trade setup` first (or pass `--knowledge-dir=<path>` — accept this as an optional inline flag if the user provides it).
 
 ### 3. Detect content kind
 

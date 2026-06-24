@@ -112,6 +112,6 @@ If the asymmetry rule activates and you're using uncapped-upside structures:
 - Pitfall 19 — direction and vega are independent axes (asymmetry is the third axis)
 - Pitfall 14 — channel-check sample bias (discount single channel; but **3+ aligned channels = real signal, not selection bias**)
 - Pitfall 6 — clever structures signal fading conviction (Jade Lizard in high-conviction bull = textbook fading-conviction structure)
-- TSEM 2026-05 — diagonal calendar capped upside in bull case (same family of error)
-- SNOW 2026-05 — Jade Lizard capped upside in massive bull tail (canonical case study)
+- [`TSEM 2026-05`](../ticker/tsem-2026-05.md) — diagonal calendar capped upside in bull case (same family of error)
+- [`SNOW 2026-05`](../ticker/snow-2026-05.md) — Jade Lizard capped upside in massive bull tail (canonical case study)
 - `../strategies.md` — Asymmetry / upside profile section

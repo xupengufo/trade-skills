@@ -21,3 +21,5 @@ Events are partially priced in. Use "what % is priced in" framing rather than "i
   - If reaction ≈ NPV × X%, then (100 - X)% is still unpriced
 - Size positions to the residual uncertainty, not the nominal news magnitude
 - Pre-earnings drift up of +5% with implied move ±7% means ~70% of expected beat is already in
+
+Reference: `../ticker/tsem-2026-05.md` — TSEM earnings: pricing in percentage. `../ticker/intc-2026-04.md` — INTC earnings: Tesla news ~70% priced in.

@@ -13,9 +13,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Extract version from tag
+      - name: Extract and validate version
         id: version
-        run: echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+        run: |
+          tag_version="${GITHUB_REF_NAME#v}"
+          plugin_version=$(jq -r .version plugins/trade/plugin.json)
+          if [ "$tag_version" != "$plugin_version" ]; then
+            echo "Error: Tag version $tag_version does not match plugin version $plugin_version in plugins/trade/plugin.json"
+            exit 1
+          fi
+          echo "version=$tag_version" >> "$GITHUB_OUTPUT"
 
       - name: Zip each skill
         run: |

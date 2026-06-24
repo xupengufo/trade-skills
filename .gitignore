@@ -138,3 +138,5 @@ package-lock.json
 # never commit back to the plugin repo.
 knowledge/
 
+# User configuration file for trade commands
+.trade-config.json

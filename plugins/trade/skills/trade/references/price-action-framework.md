@@ -3,7 +3,7 @@ type: Framework
 title: Price Action Microstructure Framework
 description: Orderbook-level mental model (flow imbalance, target divergence, vacuum zones, consensus shifts) to read tape and map microstructure signals to trade structures.
 tags: [price-action, microstructure, orderbook, vacuum-zones, consensus, tape-reading]
-timestamp: 2026-05-13T22:46:37Z
+timestamp: 2026-06-18T12:00:00Z
 ---
 
 # Price Action Microstructure Framework
@@ -11,6 +11,17 @@ timestamp: 2026-05-13T22:46:37Z
 How price moves at the orderbook level — a mental model built on four primitives: buy/sell imbalance, target-price divergence, vacuum zones, and consensus shifts. Used to read tape and explain *why* the same news produces opposite reactions in different orderbook structures.
 
 **Critical rule**: This framework explains *how* price moves even without new fundamental information, and *why* the same catalyst lands differently depending on orderbook state. It does **not** predict direction. Direction still comes from catalysts + tape; this framework tells you why the tape looks the way it does.
+
+---
+
+## Quick Reference: Microstructure Signals to Options Structures
+
+| Signal / Setup | Microstructure Signature | Reusable Play | Pitfall Link |
+|---|---|---|---|
+| **Consensus Shift / Exhaustion** | Heavy volume breakout that wicks back (ATH blow-off) | Reversion scalp / fade the pump | [P27](pitfalls/27-retest-entry-confirmation.md) |
+| **Vacuum Zone / Liquidity Gap** | Thin bid/ask depth, rapid move on low volume | Avoid debit spreads (wide bid-ask); sell premium | [P15](pitfalls/15-orderbook-fade-signal.md) |
+| **Manipulator Tape** | Oscillating 5m wicks, high volume but no trend | Jade Lizard + proxy scalps | [P12](pitfalls/12-manipulator-tape.md) |
+| **Institutional vs Retail flow** | Bid/ask ratio > 5:1, block flow alerts | Follow the block tape but watch GEX | [P17](pitfalls/17-dealer-flow-not-retail.md) |
 
 ---
 

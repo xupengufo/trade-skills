@@ -1,7 +1,7 @@
 ---
 name: trade
 description: >
-  Personal US-equity options trading knowledge base with subcommands.
+  Personal options trading knowledge base (primarily US-equity) with subcommands.
   `/trade setup` scaffolds a knowledge directory (substack, X,
   writedowns); `/trade import [file]` parses one raw file (PDF,
   screenshot, text) into structured YAML; `/trade report [tickers]`

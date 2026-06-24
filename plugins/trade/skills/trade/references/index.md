@@ -3,7 +3,7 @@ type: Index
 title: Trade Knowledge Base — Bundle Root
 description: OKF v0.1 entry point for the curated trade knowledge bundle — frameworks, 27 pitfalls, case studies, command references.
 tags: [index, okf, bundle-root, trading]
-timestamp: 2026-06-13T00:00:00Z
+timestamp: 2026-06-22T12:00:00Z
 ---
 
 # Trade Knowledge Base
